@@ -13,6 +13,6 @@ before_deploy:
 deploy:
     provider: script
     skip_cleanup: true
-    script: scp build.gradle max@serebryanskiy.site:~
+    script: scp build/libs/travis-deploy.war max@serebryanskiy.site:~
     on:
         branch: master
