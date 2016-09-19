@@ -12,6 +12,7 @@ before_deploy:
     - ssh-add $TRAVIS_BUILD_DIR/deploy_rsa
 deploy:
     provider: script
+    skip_cleanup: true
     script: scp build.gradle max@serebryanskiy.site:~
     on:
         branch: master
