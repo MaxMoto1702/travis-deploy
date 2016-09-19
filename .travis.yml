@@ -10,7 +10,6 @@ before_deploy:
     - eval "$(ssh-agent -s)"
     - chmod 600 $TRAVIS_BUILD_DIR/deploy_rsa
     - ssh-add $TRAVIS_BUILD_DIR/deploy_rsa
-# deploy:
-#     - touch test.txt
-#     - echo "Test" > test.txt
-#     - scp test.txt max@serebryanskiy.site:~
+    - touch test.txt
+    - echo "Test" > test.txt
+    - scp test.txt max@serebryanskiy.site:~
